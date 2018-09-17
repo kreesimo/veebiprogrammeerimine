@@ -1,9 +1,16 @@
 <?php
+$weekdays = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"];
 	$name = "Simo";
 	$surname = "Kree";
 	$todayDate = date("d.m.Y");
 	$hourNow = date("H");
+	$weekDay = $weekdays[date("N")-1];
 	$partOfDay = "";
+
+	
+
+	
+
 
 	if ($hourNow < 8) {
 		$partOfDay = "varajane hommik";
@@ -59,7 +66,7 @@
 </ul>
 	<p>See leht on valminud <a href="http://www.tlu.ee" target="_blank">TLÜ</a> õppetöö raames.</p>
 	<?php
-		echo "<p> Tänane kuupäev on: " .$todayDate ."</p>\n";
+		echo "<p> Täna on: " .$weekDay .", " .$todayDate ."</p>\n";
 		echo "<p> Kell oli avamisel: " .date("H:i") .", käes on " .$partOfDay .".</p> \n";
 
 	?>
