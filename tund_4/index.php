@@ -1,14 +1,16 @@
 <?php
+$weekdays = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede", "Laupäev", "Pühapäev"];
 	$name = "Simo";
 	$surname = "Kree";
-	$todayYear = date("Y");
-	$tananeKuu = date("m");
-	$tananePaev = date("d");
-	$kuuNimed = ["Jaanuar", "Veebruar", "Märts", "Aprill", "Mai", "Juuni", "Juuli", "August", "September", "Oktoober", "November", "Detsember"];
-	$todayKuu = $kuuNimed[$tananeKuu -1];
+	$todayDate = date("d.m.Y");
 	$hourNow = date("H");
+	$weekDay = $weekdays[date("N")-1];
 	$partOfDay = "";
-	$todayDate = $tananePaev."." .$todayKuu.", " .$todayYear;
+
+	
+
+	
+
 
 	if ($hourNow < 8) {
 		$partOfDay = "varajane hommik";
@@ -58,22 +60,25 @@
 <body>
 <ul>
   <li><a href="default.asp">Home</a></li>
-  <li><a href="tund_3/page.php">tund3_page</a></li>
-  <li><a href="tund_3/photo2.php">Tund3_photo</a></li>
+  <li><a href="news.asp">News</a></li>
+  <li><a href="contact.asp">Contact</a></li>
   <li><a href="about.asp">About</a></li>
 </ul>
 	<p>See leht on valminud <a href="http://www.tlu.ee" target="_blank">TLÜ</a> õppetöö raames.</p>
 	<?php
-		echo "<p> Tänane kuupäev on: " .$todayDate ."</p>\n";
-		echo "<p> Kell oli avamisel: " .date("H:i") .", käes on " .$partOfDay .".</p> \n<br>";
+		echo "<p> Täna on: " .$weekDay .", " .$todayDate ."</p>\n";
+		echo "<p> Kell oli avamisel: " .date("H:i") .", käes on " .$partOfDay .".</p> \n";
 
 	?>
 
-	
+	<img width = "50%" height ="50%" src="http://www.cs.tlu.ee/~rinde/media/fotod/TLU_600x400/tlu_4.jpg">
 
 
 	<p>Mu sõbral on ka veebileht. Vaata seda <a target="_blank" href="../~domiskl">siit</a>.
-	
+	<p>Mu sõbral on ka veebileht. Vaata seda <a target="_blank" href="../~domiskl">siit</a>.
+		<p>Mu sõbral on ka veebileht. Vaata seda <a target="_blank" href="../~domiskl">siit</a>.
+			<p>Mu sõbral on ka veebileht. Vaata seda <a target="_blank" href="../~domiskl">siit</a>.
+				<p>Mu sõbral on ka veebileht. Vaata seda <a target="_blank" href="../~domiskl">siit</a>.</p>
 
 	<img width = "50%" height ="50%" src="<?php echo($pictureFile); ?>">
 </body>
