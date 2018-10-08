@@ -12,6 +12,7 @@ require("functions.php");
     header("Location: index2.php");
     exit();
   }
+ $notice = readallunvalidatedmessages(); 
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,11 +25,12 @@ require("functions.php");
   <p>Siin on minu <a href="http://www.tlu.ee">TLÜ</a> õppetöö raames valminud veebilehed. Need ei oma mingit sügavat sisu ja nende kopeerimine ei oma mõtet.</p>
   <hr>
   <ul>
-
-  </ul>
-  <hr>
-  
+  	  
   <?php echo $notice; ?>
+  </ul>
+  
 
+  <hr>
+  <a href="main.php">Tagasi pealehele</a>
 </body>
 </html>
